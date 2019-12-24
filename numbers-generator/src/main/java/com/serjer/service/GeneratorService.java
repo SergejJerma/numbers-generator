@@ -11,15 +11,11 @@ public class GeneratorService {
 		return (number * factor % divider);
 	}
 	
-	public boolean isOverlap(long num1, long num2, int comparisonCriteria) {
-		String a = Long.toBinaryString(num1);
-		String b = Long.toBinaryString(num2);
-		
-		return a.length() >= comparisonCriteria &&
-			   b.length() >= comparisonCriteria &&
-			   	 a.substring(a.length() - comparisonCriteria, a.length())
-					.equals(
-				 b.substring(b.length() - comparisonCriteria, b.length()));
+	
+	public boolean isOverlap(long num1, long num2, int lastBitsNumber) {
+		int criteriaToCompare = Integer.parseInt("1".repeat(lastBitsNumber), 2);
+			
+		return ((num1 & criteriaToCompare) == (num2 & criteriaToCompare));
 	}
 	
 	public long calculateMatches(long num1, long num2, Generator generator) {
@@ -30,7 +26,7 @@ public class GeneratorService {
 			num1 = generateNextValue(num1, generator.getFactorA(), generator.getDivider());
 			num2 = generateNextValue(num2, generator.getFactorB(), generator.getDivider());
 				
-			if(isOverlap(num1, num2, generator.getComparisonCriteria())) 
+			if(isOverlap(num1, num2, generator.getLastBitsNumber())) 
 				matches++;
 		}
 		return matches;

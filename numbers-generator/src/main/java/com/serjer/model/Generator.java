@@ -10,5 +10,5 @@ public class Generator {
 	private long factorB;
 	private long divider;
 	private long iterationNumber;
-	private int comparisonCriteria;
+	private int lastBitsNumber;
 }

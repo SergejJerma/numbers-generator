@@ -30,11 +30,12 @@ class GeneratorServiceTests {
 		long number2 = 1431495498;
 		long number3 = 1431495499;
 		long number4 = 10;
-		int comparationCriteria = 8;
+	
+		int lastBitsNumber = 8;
 		
-		assertTrue(generatorService.isOverlap(number1, number2, comparationCriteria));
-		assertFalse(generatorService.isOverlap(number1, number3, comparationCriteria));
-		assertFalse(generatorService.isOverlap(number1, number4, comparationCriteria));
+		assertTrue(generatorService.isOverlap(number1, number2, lastBitsNumber));
+		assertFalse(generatorService.isOverlap(number1, number3, lastBitsNumber));
+		assertFalse(generatorService.isOverlap(number1, number4, lastBitsNumber));
   }
 	
 	@Test

@@ -15,8 +15,8 @@
 			 	<input type="number" class="form-control" value ="${generator.divider}" placeholder = "${generator.divider}" name = "divider" required>
 			 	<label class="font-weight-bold">Iteration number:</label>
 			 	<input type="number" class="form-control" value = "${generator.iterationNumber}" placeholder = "${generator.iterationNumber}" name = "iterationNumber" min = 1 required>
-				<label class="font-weight-bold">Comparition (Last bytes number):</label>
-			 	<input type="number" class="form-control" value = "${generator.comparisonCriteria}" placeholder = "${generator.comparisonCriteria}" name = "comparisonCriteria" min = 1 required>
+				<label class="font-weight-bold">Comparition (Last bits number):</label>
+			 	<input type="number" class="form-control" value = "${generator.lastBitsNumber}" placeholder = "${generator.lastBitsNumber}" name = "lastBitsNumber" min = 1 required>
 			</div>
 		</div>
 		<div class="form-group">
