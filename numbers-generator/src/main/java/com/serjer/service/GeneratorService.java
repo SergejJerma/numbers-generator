@@ -17,8 +17,9 @@ public class GeneratorService {
 		
 		return a.length() >= comparisonCriteria &&
 			   b.length() >= comparisonCriteria &&
-			   a.substring(a.length() - comparisonCriteria, a.length())
-					.equals(b.substring(b.length() - comparisonCriteria, b.length()));
+			   	 a.substring(a.length() - comparisonCriteria, a.length())
+					.equals(
+				 b.substring(b.length() - comparisonCriteria, b.length()));
 	}
 	
 	public long calculateMatches(long num1, long num2, Generator generator) {
